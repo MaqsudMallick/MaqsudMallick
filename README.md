@@ -13,10 +13,10 @@
 
 ---
 
-Two years of professional experience building production SaaS, and a habit of
-building the tool when the tool doesn't exist. TypeScript and Node, Java and Spring,
-Python, some Go. Most of what I enjoy sits close to the data: consistency guarantees,
-auth boundaries, query latency.
+Two years' professional experience developing production SaaS applications, and a
+knack for making the tool whenever there is no tool. TypeScript & Node, Java & Spring,
+Python, some Go. Much of what I like to do ends up being around the data: consistency
+guarantees, auth boundaries, query latencies.
 
 Everything below is my own work and public. For employment history, see
 [LinkedIn](https://linkedin.com/in/maqsud-mallick/).
@@ -27,37 +27,38 @@ Everything below is my own work and public. For employment history, see
 
 **[MaqsudMallick/tendon](https://github.com/MaqsudMallick/tendon)** · `Java 17` `Spring Boot` `PostgreSQL` `Prometheus`
 
-When you split a monolith, PostgreSQL stops enforcing the relationships it used to
-guarantee for free. `orders.customer_id` can point at a customer that no longer exists
-and nothing complains, because a foreign key can't span two databases.
+The moment you divide your monolith, PostgreSQL will lose control of the constraints
+it previously maintained automatically. `orders.customer_id` could refer to a customer
+that no longer exists, and nothing will complain, since a foreign key cannot cross two
+databases.
 
 ```text
 orders.customer_id ──?──► customers.id    100 → 100 ✓   101 → 101 ✓   999 → ??? ✗ orphan
 ```
 
-Tendon reconnects them. Point it at your service databases with **read-only**
-credentials, declare the cross-service relationships in a YAML contract, and it scans
-continuously for orphaned references — exposing violations over REST and Prometheus.
-No changes to your services.
+Tendon reconnects them. Aim it at your service databases using **read-only**
+credentials, declare the cross-service relationships in a YAML contract, and it
+constantly hunts for orphan references, reporting violations via REST and Prometheus.
+No changes needed on your services.
 
-The interesting problem is false positives: a child row can legitimately reference a
-parent that hasn't replicated yet. So candidates are **aged and re-verified** before
-anything alerts, and integrity SLOs let you tolerate brief in-flight references while
-still catching durable breakage. *Pre-alpha.*
+The fascinating problem is that of false positives: the child row may well be validly
+referring to a parent which has not yet been replicated. Thus, all candidates are
+**aged and re-verified** before anything alerts, and the integrity SLOs allow one to
+tolerate short in-flight references and still find lasting breakage. *Pre-alpha.*
 
 ## 🔬 Archon — autonomous deep-research agent
 
 **[MaqsudMallick/deepresearch-agent](https://github.com/MaqsudMallick/deepresearch-agent)** · `Python` `LangGraph` `Qdrant` `SQLite`
 
-An agent that researches a question on its own over a long horizon. **62 tools across 6
-namespaces** (web, document, knowledge, synthesis, context, subagent), driven by a
-LangGraph state machine with checkpointing so a run survives interruption, and context
-compression so it survives its own length.
+An agent that does research on its own into a problem for an extended period of time.
+**62 tools in 6 namespaces** (web, document, knowledge, synthesis, context, subagent)
+using a LangGraph state machine with checkpointing to survive interruption and context
+compression to survive its own length.
 
-Spawns **isolated subagents** for parallel research threads. Every tool has
-Pydantic-typed inputs and outputs, which is what makes them chain without glue code.
-Ships with the unglamorous parts too — observability, retry with backoff, rate limiting,
-typed errors.
+Forks out **subagents in isolation** to allow multiple research threads to run in
+parallel. Each tool comes equipped with Pydantic-typed inputs and outputs, which is what
+lets them chain without glue code. Includes the unsexy stuff, too — observability, retry
+with backoff, rate limiting, and typed errors.
 
 ## Open source
 
