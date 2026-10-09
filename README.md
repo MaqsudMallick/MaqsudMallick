@@ -59,18 +59,6 @@ Pydantic-typed inputs and outputs, which is what makes them chain without glue c
 Ships with the unglamorous parts too — observability, retry with backoff, rate limiting,
 typed errors.
 
-## Also worth a look
-
-| Project | What it is | Stack |
-|---|---|---|
-| **[kanban](https://github.com/MaqsudMallick/kanban)** · [live ↗](https://kanban-one-sable.vercel.app) | A kanban board over your *real* GitHub issues. Sign in, pick a repo, drag issues between columns — moves, labels, assignees, new issues and branch creation all write straight through to GitHub. | `Next.js` `TypeScript` `Octokit` |
-| **[jpred](https://github.com/MaqsudMallick/jpred)** | Terminal UI time tracker built for job hunting. Three independent timers that auto-open the right tool for the task, goal alerts, session history, keyboard-first. | `Node 20` `TUI` |
-| **[events-api](https://github.com/MaqsudMallick/events-api)** | Event registration REST API — JWT middleware, bcrypt hashing, Postgres, documented endpoints. Written to learn Go properly. | `Go` `PostgreSQL` |
-| **[docmark-server](https://github.com/MaqsudMallick/docmark-server)** | Document annotation backend on Spring Security — JWT filter chain with custom entry-point and access-denied handling. | `Java` `Spring Boot` |
-| **[ecommerce-scrapper](https://github.com/MaqsudMallick/ecommerce-scrapper)** · [live ↗](https://ecommerce-scrapper-six.vercel.app/) | Price comparison across Flipkart and Google Shopping, with Puppeteer and Cheerio scrapers behind a debounced search. | `Next.js` `Puppeteer` `Cheerio` |
-| **[MinimalisticAssembler](https://github.com/MaqsudMallick/MinimalisticAssembler)** | A two-pass assembler and object loader for a toy instruction set, opcode table and all. | `C++` |
-| **[GermanKeyboardDriver](https://github.com/MaqsudMallick/GermanKeyboardDriver)** | A custom Windows keyboard layout for typing German without a German keyboard. | `C++` |
-
 ## Open source
 
 **[Nextcloud](https://github.com/nextcloud)** — 5 merged PRs across the Mail app, Android client and Android library:
@@ -86,6 +74,18 @@ typed errors.
 **AI-Powered Medical Waste Management with IoT** — IEEE, March 2025. An IoT and deep
 learning pipeline for real-time medical waste classification using ResNeXt, at 97.93%
 accuracy.
+
+## Also worth a look
+
+| Project | What it is | Stack |
+|---|---|---|
+| **[kanban](https://github.com/MaqsudMallick/kanban)** · [live ↗](https://kanban-one-sable.vercel.app) | A kanban board over your *real* GitHub issues. Sign in, pick a repo, drag issues between columns — moves, labels, assignees, new issues and branch creation all write straight through to GitHub. | `Next.js` `TypeScript` `Octokit` |
+| **[jpred](https://github.com/MaqsudMallick/jpred)** | Terminal UI time tracker built for job hunting. Three independent timers that auto-open the right tool for the task, goal alerts, session history, keyboard-first. | `Node 20` `TUI` |
+| **[events-api](https://github.com/MaqsudMallick/events-api)** | Event registration REST API — JWT middleware, bcrypt hashing, Postgres, documented endpoints. Written to learn Go properly. | `Go` `PostgreSQL` |
+| **[docmark-server](https://github.com/MaqsudMallick/docmark-server)** | Document annotation backend on Spring Security — JWT filter chain with custom entry-point and access-denied handling. | `Java` `Spring Boot` |
+| **[ecommerce-scrapper](https://github.com/MaqsudMallick/ecommerce-scrapper)** · [live ↗](https://ecommerce-scrapper-six.vercel.app/) | Price comparison across Flipkart and Google Shopping, with Puppeteer and Cheerio scrapers behind a debounced search. | `Next.js` `Puppeteer` `Cheerio` |
+| **[MinimalisticAssembler](https://github.com/MaqsudMallick/MinimalisticAssembler)** | A two-pass assembler and object loader for a toy instruction set, opcode table and all. | `C++` |
+| **[GermanKeyboardDriver](https://github.com/MaqsudMallick/GermanKeyboardDriver)** | A custom Windows keyboard layout for typing German without a German keyboard. | `C++` |
 
 ## Stack
 
